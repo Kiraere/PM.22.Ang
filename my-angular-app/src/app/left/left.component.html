@@ -1,4 +1,5 @@
-<section class="left">
+<section class="left-s">
+
   <div class="addres">
     <h3 class="addres__title">Address</h3>
     <p class="addres__description">SS Sterrt City/Zip Code - 456</p>
@@ -6,7 +7,7 @@
   <div class="photo">
     <img
       class="photo_image"
-      src="./img/labwork07.jpg"
+      src="image/labwork07.jpg"
       alt="profile picture"
     />
   </div>
@@ -31,35 +32,46 @@
       >urwebsitename.com</a
       >
     </div>
-
-  </div>
-  <div class="reference">
-    <h3 class="left_title reference_title">reference</h3>
-    <div>
-      <p class="reference_name">Sara Taylore</p>
-      <p class="reference_description">Director I Company Name</p>
-      <a class="reference_description" href="tel:+1 234 56789"
-      >T : +1 234 56789</a
-      >
+    <div *ngIf="references && references.length > 0">
+      <div class="reference" *ngFor="let reference of references">
+        <h3 class="left_title reference_title">Reference</h3>
+        <div>
+          <p class="reference_name">{{ reference.name }}</p>
+          <p class="reference_description">{{ reference.title }}</p>
+          <a class="reference_description" [href]="'tel:' + reference.phone">
+            T : {{ reference.phone }}
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+
+    <!--  </div>-->
+<!--  <div class="reference">-->
+<!--    <h3 class="left_title reference_title">reference</h3>-->
+<!--    <div>-->
+<!--      <p class="reference_name">Sara Taylore</p>-->
+<!--      <p class="reference_description">Director I Company Name</p>-->
+<!--      <a class="reference_description" href="tel:+1 234 56789"-->
+<!--      >T : +1 234 56789</a-->
+<!--      >-->
+    </div>
   <div class="hobbies">
     <h3 class="left_title hobbies_title">hobbies</h3>
     <div class="hobbies_list">
       <div class="hobbies_item">
-        <img class="item_image" src="./img/travel.png" alt="" />
+        <img class="item_image" src="image/travel.png" alt="" />
         <p class="item_text">Travel</p>
       </div>
       <div class="hobbies_item">
-        <img class="item_image" src="./img/music.png" alt="" />
+        <img class="item_image" src="image/music.png" alt="" />
         <p class="item_text">Music</p>
       </div>
       <div class="hobbies_item">
-        <img class="item_image" src="./img/writing.png" alt="" />
+        <img class="item_image" src="image/writing.png" alt="" />
         <p class="item_text">Writing</p>
       </div>
       <div class="hobbies_item">
-        <img class="item_image" src="./img/chess.png" alt="" />
+        <img class="item_image" src="image/chess.png" alt="" />
         <p class="item_text">Chess</p>
       </div>
     </div>

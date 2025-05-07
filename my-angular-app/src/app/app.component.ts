@@ -12,4 +12,11 @@ import {RightComponent} from './right/right.component';
 })
 export class AppComponent {
   title = 'my-angular-app';
+  references = [
+    {
+      "name":"reference1",
+      "title":"Reference1 title",
+      "phone":"+380961236343",
+    }
+    ];
 }

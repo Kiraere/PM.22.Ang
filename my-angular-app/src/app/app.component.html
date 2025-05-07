@@ -1,4 +1,10 @@
-
-<app-left> </app-left>
-<app-right> </app-right>
-
+<div class="container">
+  <div class="content">
+    <div style="display: flex;">
+      <app-left [references]="references" class = "left" style="margin-left: 24px"></app-left>
+      <app-right class = "right" style="margin-left: 60px"></app-right>
+    </div>
+<!--<app-left> </app-left>-->
+<!--<app-right> </app-right>-->
+  </div>
+</div>
