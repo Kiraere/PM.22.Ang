@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "title": "Test Post",
+      "body": "This is a sample body text.",
+      "userId": 9,
+      "id": 1
+    },
+    {
+      "title": "Hello World",
+      "body": "Here is some mock body text for you.",
+      "userId": 9,
+      "id": 2
+    },
+    {
+      "title": "Hello World",
+      "body": "Here is some mock body text for you.",
+      "userId": 10,
+      "id": 3
+    },
+    {
+      "title": "Mock Title",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "title": "Mock Title",
+      "body": "This is a sample body text.",
+      "userId": 10,
+      "id": 5
+    },
+    {
+      "title": "Daily Update",
+      "body": "Generated content for testing purposes.",
+      "userId": 8,
+      "id": 6
+    },
+    {
+      "title": "Mock Title",
+      "body": "This is a sample body text.",
+      "userId": 2,
+      "id": 7
+    }
+  ],
+  "about": {
+    "id": 1,
+    "text": "Lorem ipsum dolor a consectetur adipiscing elitse eiusmod tempor nincididunt labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo"
+  }
+}

@@ -7,12 +7,10 @@
 
     <h3 class="left_title ">about me</h3>
     <div id="about-me-container">
-
-                          <p class="aboutme_text">
-                              Lorem ipsum dolor a consectetur adipiscing elitse eiusmod tempor
-                              incididunt labore dolore magna aliqua. Quis ipsum suspendisse
-                              ultrices gravida. Risus commodo
-                          </p>
+      <p class="aboutme_text">
+        {{aboutMe()}}
+      </p>
+      <button (click)="makePostReq()">post me</button>
     </div>
 
   </div>
