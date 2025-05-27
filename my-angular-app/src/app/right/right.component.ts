@@ -1,9 +1,11 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { ApiService } from '../api.service';
+import { TemplateRegistrationComponent } from '../template-registration/template-registration.component';
+import { ReactiveRegistrationComponent } from '../reactive-registration/reactive-registration.component';
 
 @Component({
   selector: 'app-right',
-  imports: [],
+  imports: [TemplateRegistrationComponent, ReactiveRegistrationComponent],
   standalone: true,
 
   templateUrl: './right.component.html',

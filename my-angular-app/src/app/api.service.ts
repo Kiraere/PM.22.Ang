@@ -26,5 +26,10 @@ export class ApiService {
   createPost(postData: { title: string; body: string; userId: number }): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/posts`, postData);
   }
+
+  registerUser(userData: { username: string; password: string }) {
+    return this.http.post(`${this.apiUrl}/register`, userData);
+  }
+
 }
 

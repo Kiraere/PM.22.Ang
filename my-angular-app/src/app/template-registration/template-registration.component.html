@@ -1,0 +1,41 @@
+<form #registrationForm="ngForm" (ngSubmit)="register(registrationForm)">
+  <div>
+    <label for="name">Ім’я:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="username"
+      required
+      minlength="3"
+      #nameRef="ngModel"
+    />
+    <div *ngIf="nameRef.invalid && nameRef.touched" class="error">
+      Ім’я обов’язкове і має містити мінімум 3 символи.
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Пароль:</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      [(ngModel)]="password"
+      required
+      minlength="6"
+      #passwordRef="ngModel"
+    />
+    <div *ngIf="passwordRef.invalid && passwordRef.touched" class="error">
+      Пароль обов’язковий (мінімум 6 символів).
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="registrationForm.invalid">
+    Зареєструватися
+  </button>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+
+</form>

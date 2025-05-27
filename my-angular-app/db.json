@@ -41,10 +41,71 @@
       "body": "This is a sample body text.",
       "userId": 2,
       "id": 7
+    },
+    {
+      "title": "Random Thoughts",
+      "body": "Generated content for testing purposes.",
+      "userId": 7,
+      "id": 8
+    },
+    {
+      "title": "Test Post",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "title": "Test Post",
+      "body": "This is another example of a mock post body.",
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "title": "Test Post",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "userId": 3,
+      "id": 11
+    },
+    {
+      "title": "Mock Title",
+      "body": "Generated content for testing purposes.",
+      "userId": 2,
+      "id": 12
+    },
+    {
+      "title": "Daily Update",
+      "body": "This is a sample body text.",
+      "userId": 3,
+      "id": 13
+    },
+    {
+      "title": "Hello World",
+      "body": "Generated content for testing purposes.",
+      "userId": 2,
+      "id": 14
+    },
+    {
+      "title": "Daily Update",
+      "body": "This is a sample body text.",
+      "userId": 8,
+      "id": 15
+    },
+    {
+      "title": "Daily Update",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "userId": 8,
+      "id": 16
     }
   ],
   "about": {
     "id": 1,
     "text": "Lorem ipsum dolor a consectetur adipiscing elitse eiusmod tempor nincididunt labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo"
-  }
+  },
+  "register": [
+    {
+      "username": "vvvv",
+      "password": "1818181",
+      "id": 1
+    }
+  ]
 }
