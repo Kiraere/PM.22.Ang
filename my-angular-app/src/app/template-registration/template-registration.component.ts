@@ -2,19 +2,23 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-template-registration',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,
+    CommonModule],
   templateUrl: './template-registration.component.html',
   styleUrls: ['./template-registration.component.css']
 })
 export class TemplateRegistrationComponent {
-  username = '';
-  password = '';
+  phone: string = '';
+  address = '';
+  email = '';
   errorMessage = '';
   successMessage = '';
+
 
   @Output() registerSuccess = new EventEmitter<void>();
 
@@ -22,15 +26,20 @@ export class TemplateRegistrationComponent {
 
   register(form: NgForm) {
     if (form.valid) {
-      this.apiService.registerUser({ username: this.username, password: this.password })
+      const registrationData = {
+        phone: this.phone,
+        email: this.email,
+        address: this.address
+      };
+
+      this.apiService.registerUser({ phone: this.phone, email: this.email , address: this.address})
         .subscribe({
           next: () => {
             this.successMessage = 'Реєстрація пройшла успішно!';
             this.errorMessage = '';
             this.registerSuccess.emit();
             form.reset();
-            // Можна, наприклад, перейти на іншу сторінку
-            // this.router.navigate(['/login']);
+            // this.router.navigate(['/login']); // Якщо потрібно переходити
           },
           error: (err) => {
             this.errorMessage = 'Помилка реєстрації: ' + (err.error?.message || 'Спробуйте пізніше');

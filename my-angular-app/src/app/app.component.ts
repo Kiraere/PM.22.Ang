@@ -4,11 +4,11 @@ import {LeftComponent} from './left/left.component';
 import {RightComponent} from './right/right.component';
 import {TemplateRegistrationComponent} from './template-registration/template-registration.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveRegistrationComponent } from './reactive-registration/reactive-registration.component';
+// import { ReactiveRegistrationComponent } from './reactive-registration/reactive-registration.component';
 
 @Component({
   selector: 'app-root',
-  imports: [LeftComponent, RightComponent, TemplateRegistrationComponent, ReactiveRegistrationComponent],
+  imports: [LeftComponent, RightComponent, TemplateRegistrationComponent],
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

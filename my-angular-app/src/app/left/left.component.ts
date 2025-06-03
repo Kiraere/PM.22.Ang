@@ -14,9 +14,10 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {TemplateRegistrationComponent} from "../template-registration/template-registration.component";
 
 @Component({
-  imports: [CommonModule],
+    imports: [CommonModule, TemplateRegistrationComponent],
   selector: 'app-left',
   standalone: true,
   templateUrl: './left.component.html',

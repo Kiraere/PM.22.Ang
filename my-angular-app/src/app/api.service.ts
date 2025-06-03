@@ -13,21 +13,22 @@ export class ApiService {
 
   constructor(private http: HttpClient) {}
 
+  // GET-запит для отримання даних
   getAboutMe(): Observable<{ id: number, text: string }> {
     return this.http.get<{ id: number, text: string }>(`${this.apiUrl}/about`);
   }
 
-  // GET-запит для отримання даних
-  getPosts(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
-  }
+  //
+  // getPosts(): Observable<any[]> {
+  //   return this.http.get<any[]>(this.apiUrl);
+  // }
 
   // POST-запит для надсилання даних
   createPost(postData: { title: string; body: string; userId: number }): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/posts`, postData);
   }
 
-  registerUser(userData: { username: string; password: string }) {
+  registerUser(userData: { phone: string; email: string; address: string }): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, userData);
   }
 

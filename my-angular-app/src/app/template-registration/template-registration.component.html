@@ -1,41 +1,61 @@
 <form #registrationForm="ngForm" (ngSubmit)="register(registrationForm)">
-  <div>
-    <label for="name">Ім’я:</label>
+  <div >
+    <h3 class="left_title contact__title">Contact:</h3>
+    <label for="phone" class="contact_card_title">Phone:</label>
     <input
+      style="display: flex; justify-content: flex-end;"
+      type="tel"
+      id="phone"
+      name="phone"
+      [(ngModel)]="phone"
+      required
+      pattern="^[0-9]{10,15}$"
+      #phoneRef="ngModel"
+    />
+    <div *ngIf="phoneRef.invalid && phoneRef.touched" class="error">
+      Введіть дійсний номер <br> телефону (10–15 цифр).
+    </div>
+  </div>
+
+  <div>
+    <label for="email" class="contact_card_title">Email:</label>
+    <input
+      style="display: flex; justify-content: flex-end;"
+      type="email"
+      id="email"
+      name="email"
+      [(ngModel)]="email"
+      required
+      pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+      #emailRef="ngModel"
+    />
+    <div *ngIf="emailRef.errors?.['pattern'] && emailRef.touched" class="error">
+      Email має бути у форматі <br> someone&#64;example.com
+    </div>
+  </div>
+
+  <div>
+    <label for="address" class="contact_card_title">Address:</label>
+    <input
+      style="display: flex; justify-content: flex-end;"
       type="text"
-      id="name"
-      name="name"
-      [(ngModel)]="username"
+      id="address"
+      name="address"
+      [(ngModel)]="address"
       required
-      minlength="3"
-      #nameRef="ngModel"
+      minlength="5"
+      #addressRef="ngModel"
     />
-    <div *ngIf="nameRef.invalid && nameRef.touched" class="error">
-      Ім’я обов’язкове і має містити мінімум 3 символи.
+    <div *ngIf="addressRef.invalid && addressRef.touched" class="error">
+      Адреса обов’язкова <br> (мінімум 5 символів).
     </div>
   </div>
 
-  <div>
-    <label for="password">Пароль:</label>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      [(ngModel)]="password"
-      required
-      minlength="6"
-      #passwordRef="ngModel"
-    />
-    <div *ngIf="passwordRef.invalid && passwordRef.touched" class="error">
-      Пароль обов’язковий (мінімум 6 символів).
-    </div>
-  </div>
-
-  <button type="submit" [disabled]="registrationForm.invalid">
-    Зареєструватися
+  <button type="submit" [disabled]="registrationForm.invalid" >
+    Submit
   </button>
 
   <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
   <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
-
 </form>
+

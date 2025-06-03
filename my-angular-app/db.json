@@ -95,6 +95,48 @@
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "userId": 8,
       "id": 16
+    },
+    {
+      "title": "Hello World",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "userId": 10,
+      "id": 17
+    },
+    {
+      "title": "Random Thoughts",
+      "body": "This is another example of a mock post body.",
+      "userId": 7,
+      "id": 18
+    },
+    {
+      "title": "Daily Update",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "userId": 5,
+      "id": 19
+    },
+    {
+      "title": "Mock Title",
+      "body": "Generated content for testing purposes.",
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "title": "Hello World",
+      "body": "Generated content for testing purposes.",
+      "userId": 9,
+      "id": 21
+    },
+    {
+      "title": "Mock Title",
+      "body": "Generated content for testing purposes.",
+      "userId": 1,
+      "id": 22
+    },
+    {
+      "title": "Hello World",
+      "body": "Here is some mock body text for you.",
+      "userId": 7,
+      "id": 23
     }
   ],
   "about": {
@@ -106,6 +148,34 @@
       "username": "vvvv",
       "password": "1818181",
       "id": 1
+    },
+    {
+      "username": "vvvv",
+      "password": "1818181",
+      "id": 2
+    },
+    {
+      "username": "Віолетта",
+      "password": "333333",
+      "id": 3
+    },
+    {
+      "phone": "0678584760",
+      "email": "kira.yeromina.pm.2023@lpnu.ua",
+      "address": "Naberezhna Peremohi Street, 44",
+      "id": 4
+    },
+    {
+      "phone": "0277544468",
+      "email": "лшкф@ggg.7",
+      "address": "Naadhdh",
+      "id": 5
+    },
+    {
+      "phone": "050550939339",
+      "email": "gagaga",
+      "address": "hahaa",
+      "id": 6
     }
   ]
 }
